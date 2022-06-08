@@ -1,0 +1,232 @@
+label {
+  display: inline-flex;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.582);
+  display: flex;
+  justify-content: end;
+}
+
+@media only screen and (max-device-width: 600px) {
+  body {
+    background-color: rgb(172, 134, 108);
+  }
+}
+
+.activeIcon::before {
+  transform: rotate(90deg);
+  top: 0 !important;
+}
+
+.activeIcon {
+  transform: rotate(45deg);
+}
+
+.activeIcon::after {
+  opacity: 0;
+}
+
+.burgerIcon {
+  display: inline-block;
+  position: relative;
+  width: 3.7rem;
+  height: 0.35rem;
+  border-radius: 11px;
+  background-color: grey;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+
+.burgerIcon::after {
+  content: "";
+  position: absolute;
+  width: 3.7rem;
+  height: 0.35rem;
+  background-color: inherit;
+  top: 15px;
+  left: 0;
+  transition: 0.5s;
+  border-radius: 11px;
+}
+
+.burgerIcon::before {
+  content: "";
+  position: absolute;
+  width: 3.7rem;
+  height: 0.35rem;
+  background-color: inherit;
+  top: -15px;
+  left: 0;
+  transition: 0.5s;
+  border-radius: 11px;
+}
+
+.burgerIconContainer {
+  display: block;
+  text-align: end;
+  margin-right: 2.5rem;
+  margin-top: 1.5rem;
+  user-select: none;
+}
+
+.cover {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+
+.coverContainer {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: 0.8s;
+}
+
+.coverContainerAbs {
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.activeContainer {
+  right: 0 !important;
+}
+
+input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.coverContent {
+  position: relative;
+  transition: 0.8s;
+  padding-top: 25px;
+  display: flex;
+  justify-content: end;
+}
+
+.menuContainer {
+  width: 25rem;
+  height: 60rem;
+  margin-top: -25px;
+  background-color: #222222;
+}
+
+.menuContent {
+  font-size: 1.5rem;
+  color: #fff7e8;
+  padding-top: 8rem;
+  font-family: sans-serif;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul label {
+  display: block;
+  background-color: black;
+  padding-left: 2.5rem;
+  padding-top: 1.5rem;
+  height: 4rem;
+}
+
+hr {
+  margin: 0;
+  width: 65%;
+  margin-left: 31.5%;
+  transform: translateX(-50px);
+}
+
+li {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  margin-top: 10px;
+  width: 150px;
+  margin-right: 180px;
+}
+
+.arrow {
+  width: 4rem;
+  height: 2.75rem;
+  background-color: dimgrey;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: -20px;
+  margin-right: 25px;
+  position: relative;
+}
+
+.arrow::after {
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  position: absolute;
+  border-bottom: solid 2px #b7b7b7;
+  border-left: solid 2px #b7b7b7;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: 0.3s;
+}
+
+#menu1:checked + .arrow::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 40%;
+  left: 50%;
+}
+
+#menu2:checked + .arrow::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 40%;
+  left: 50%;
+}
+
+#menu3:checked + .arrow::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 40%;
+  left: 50%;
+}
+
+.menuItem div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.details {
+  border-top: solid 1px #ffffff61;
+  width: 75%;
+  margin-left: 2rem;
+  color: rgb(216 213 255);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.homeDet,
+.socialDet,
+.storeDet {
+  height: 0;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.activeDet {
+  height: 15rem;
+}
+
+.detContainer {
+  background-color: black;
+  padding-left: 2.5rem;
+}

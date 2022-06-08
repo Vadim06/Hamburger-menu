@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <label>
+        <div class="burgerIconContainer">
+            <span class="burgerIcon"></span>
+            <input type="checkbox" class="burgerCheck" onchange="burger()">
+        </div>
+    </label>
+    <div class="coverContainerAbs">
+        <div class="coverContainer">
+            <div class="cover">
+                <div class=coverContent>
+                    <div class="menuContainer">
+                        <div class="menuContent">
+                            <ul>
+                                <label class="menuItem">
+                                    <div>
+                                        <li>Home</li>
+                                        <input type="radio" id="menu1" name="menu" value="home"
+                                            onchange="menuChangeHandler('.homeDet')" onclick="clickHandler('menu1')">
+                                        <span class="arrow"></span>
+                                    </div>
+                                </label>
+                                <div class="detContainer">
+                                    <div class="homeDet">
+                                        <ul>
+                                            <li class="details">About us</li>
+                                            <li class="details">Main</li>
+                                            <li class="details">Gallery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+                                <label class="menuItem">
+                                    <div>
+                                        <li>Stores</li>
+                                        <input type="radio" id="menu2" name="menu" value="stores"
+                                            onchange="menuChangeHandler('.storeDet')" onclick="clickHandler('menu2')">
+                                        <span class="arrow"></span>
+                                    </div>
+                                </label>
+                                <div class="detContainer">
+                                    <div class="storeDet">
+                                        <ul>
+                                            <li class="details">Coffee Store</li>
+                                            <li class="details">Bakery</li>
+                                            <li class="details">Ice Cream Store</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+                                <label class="menuItem">
+                                    <div>
+                                        <li>Social</li>
+                                        <input type="radio" id="menu3" name="menu" value="social"
+                                            onchange="menuChangeHandler('.socialDet')" onclick="clickHandler('menu3')">
+                                        <span class="arrow"></span>
+                                    </div>
+                                </label>
+
+                                <div class="detContainer">
+                                    <div class="socialDet">
+                                        <ul>
+                                            <li class="details">Instagram</li>
+                                            <li class="details">Tik Tok</li>
+                                            <li class="details">Facebook</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
